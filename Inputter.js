@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class Inputter extends Component {
   constructor(props) {
@@ -23,13 +24,28 @@ class Inputter extends Component {
       <div>
         <p>
           <form onSubmit={this.handleSubmit}>
-            <input placeholder="start typing" onChange={this.handleChange} />
-            <input type="submit" value="Submit" />
+            <Input placeholder="Start typing" onChange={this.handleChange} />
+            <Button type="submit" value="Submit">Submit</Button>
           </form>
         </p>
       </div>
     );
   }
 }
+
+const Input = styled.input`
+  color: red;
+  border: none;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid blue;
+  `;
+
+  const Button = styled.button`
+    background-color: yellow;
+    margin-left: 2em;
+    border-radius 5px;
+
+  `
 
 export default Inputter
